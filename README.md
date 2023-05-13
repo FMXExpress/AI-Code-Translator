@@ -1,7 +1,7 @@
 # AI Code Translator
 Translate source code from languages like C++, Python, and C# to Delphi using ChatGPT.
 
-The AI Code Translator Desktop client is a powerful UI for creating translating and converting code between programming languages.
+The AI Code Translator Desktop client is a powerful UI for creating translating and converting code between programming languages. Comes with the ability to verify Delphi and C++ code by compiling it and then reporting errors back to ChatGPT.
 
 * Delphi Object Pascal
 * C++
