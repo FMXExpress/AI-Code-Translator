@@ -37,7 +37,21 @@ The AI Code Translator Desktop client is a powerful UI for creating translating 
 
 Built with [Delphi](https://www.embarcadero.com/products/delphi/) using the FireMonkey framework this client works on Windows, macOS, and Linux (and maybe Android+iOS) with a single codebase and single UI. At the moment it is specifically set up for Windows.
 
-It features a REST integration with OpenAI.com and ChatGPT for providing source code translation functionality within the client. You need to sign up for an API key to access that functionality.
+It features a REST integration with OpenAI.com and ChatGPT for providing source code translation functionality within the client. You need to sign up for an API key to access that functionality. Replicate models can be run in the cloud or locally via docker.
+
+```
+docker run -d -p 5000:5000 --gpus=all r8.im/replicate/vicuna-13b@sha256:6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b
+curl http://localhost:5000/predictions -X POST -H "Content-Type: application/json" \
+  -d '{"input": {
+    "prompt": "...",
+    "max_length": "...",
+    "temperature": "...",
+    "top_p": "...",
+    "repetition_penalty": "...",
+    "seed": "...",
+    "debug": "..."
+  }}'
+```
 
 # AI Code Translator Desktop client Screeshot on Windows
 ![AI Code Translator Desktop client on Windows](/screenshot.png)
